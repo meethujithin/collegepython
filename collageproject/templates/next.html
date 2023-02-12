@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+    <title>Next</title>
+    <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- slick slider -->
+
+  <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}" />
+  <!-- font awesome style -->
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+</head>
+<body>
+<div class="bottom_bg">
+<header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              <a href="/ ">
+              <img src="{% static 'images/logo.png' %}" alt="logo image" width="50px;" height="50px;">
+              </a>
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                  <li class="nav-item active">
+                  <a class="nav-link" href="/">GRANDVUE <span class="sr-only">(current)</span></a>
+                </li>&nbsp &nbsp &nbsp &nbsp
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>&nbsp &nbsp &nbsp &nbsp
+                {% if user.is_authenticated %}
+									<h5 style="color:white;">Hello {{user.username}}...</h5>&nbsp &nbsp &nbsp &nbsp
+									{% else %}
+                <li class="nav-item">
+                  <a class="nav-link" href="credentials/register">Register </a>&nbsp &nbsp &nbsp &nbsp
+                </li>
+                <div class="quote_btn-container">
+              <a href="credentials/login">
+                  <button type="button" class="btn btn-secondary">Login
+                <i class="fa fa-user" aria-hidden="true"></i>
+                </button>
+              </a>
+                </div>
+                {% endif %}
+                  <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Department
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Computer_science">Computer Science</a>
+          <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Commerce">Commerce</a>
+          <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Electronics">Electronics</a>
+          <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Chemistry">Chemistry</a>
+          <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Physics">Physics</a>
+        </div>
+      </li>
+              </ul>
+            </div>
+            </div>
+
+        </nav>
+      </div>
+    </header><br><br><br>
+<div class="container">
+    <center>
+    <h5>If you want to know more details about the courses of each department and ordered our college items, then you follow the next page by clicking the next button...</h5>
+    <form action="order">
+        <button style="background-color:#BCB4B3;width:100px;">Next</button>
+    </form>
+        </center><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+    <footer class="footer_section">
+    <div class="container">
+      <div class="footer_box">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved
+        </p>
+        <p>
+          Privacy & Policy
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>
+<!-- jQery -->
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <!-- bootstrap js -->
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <!-- custom js -->
+  <script src="{% static 'js/custom.js' %}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+</body>
+</html>
